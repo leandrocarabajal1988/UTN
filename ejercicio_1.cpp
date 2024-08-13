@@ -19,5 +19,6 @@ int main()
     cout << "el sueldo es:" << t;
     getch ();
 
+
     return 0;
 }
