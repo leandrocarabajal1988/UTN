@@ -5,23 +5,21 @@ using namespace std;
 
 int main()
 {
-    // m=minutos ingresados, h=horas, mr=minutos restantes //
+    //p=precio del articulo, d=precio con descuento, t=total a pagar, pd=porcentaje de descuento//
 
-    int m, h, mr;
+    float p, d, pd, da;
 
-    cout << "ingrese la cantidad de minutos: " << endl;
-    cin >> m;
+    cout << "ingrese el valor del articulo: " << endl;
+    cin >> p;
+    cout << "ingrese el importe con descuento : " << endl;
+    cin >> d;
+    pd =(d*100)/p;
+    da=100-pd;
+    cout << "el descuento aplicado es del: " << da <<"%" << endl;
 
-    h=m/60;
-    mr= m%60;
 
-    cout << h << " horas y " << mr <<"minutos " << endl; 
-  
     getch();
 
     return 0;
-    
-
-
 
 }
