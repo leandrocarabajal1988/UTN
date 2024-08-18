@@ -16,12 +16,11 @@ int main()
     {
         cout << "es negativo" << endl;
     }
-        else 
-        if (n>0)
+     else if (n>0)
         {
             cout << "es positivo" << endl;
         }
-        else {
+    else {
         cout << "es cero";
 
     }
@@ -29,5 +28,4 @@ int main()
     getch();
 
     return 0;
-    
 }
