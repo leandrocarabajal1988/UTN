@@ -9,16 +9,16 @@ int main()
     int n1, n2;
 
 
-    cout <<"ingrese el primer numero: " <<endl;
+    cout <<"ingrese el primer número: " <<endl;
     cin >> n1;
-    cout << "ingrese el segundo numero: " << endl;
+    cout << "ingrese el segundo número: " << endl;
     cin >> n2;
 
     if (n1%n2==0) {
-            cout << "el primer numero es multiplo del segundo numero";
+            cout << "el primer número es multiplo del segundo numero";
     }
         else {
-            cout <<"el primero n�mero NO es multiplo del segundo numero";
+            cout <<"el primero número NO es multiplo del segundo numero";
             }
 
     getch ();
