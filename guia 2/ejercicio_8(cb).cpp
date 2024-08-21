@@ -12,20 +12,23 @@ int main(){
     cout<<"ingrese los tres lados de un triangulo: "<<endl;
     cin>>l1>>l2>>l3;
 
-     if(l1==l2){
+   if (l1==l2){
         if(l2==l3){
-            cout<<"el triangulo es equilatero";
+          cout<<"el triangulo es equilatero "<<endl;
         }
-            else if(l1==l3){
-                cout<<"el triangulo es isoceles";
+        else{
+            cout<<"el triangulo es isoceles "<<endl;
+        }}
+    else if(l1==l3){
+    cout<<"el triangulo es isoceles "<<endl;
+}
+    else if(l2==l3){
+        cout<<"el triangulo es isoceles "<<endl;
+    }
+        else{
+            cout<<"el triangulo es escaleno "<<endl;
         }
-        else if(l2=l3){
-        cout<<"el triangulo es isoceles";
-     }
-     else {
-         cout<<"el triangulo es isoceles";
-     }
-     }
+
     getch();
     return 0;
 }
