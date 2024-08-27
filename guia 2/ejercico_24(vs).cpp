@@ -6,15 +6,11 @@ int main(){
 
     /*variables:
     nmes: numero de mes
-    bimes1: primer bimestre
-    bimes2: segundo bimestre
-    bimes3: tercer bimestre
-    bimes4: cuarto bimestre
-    bimes5: quinto bimestre
-    bimes6: sexto bimestre
+    trimes: grupo de trimestre
+    
     */
     int nmes;
-    int bimes, resto;
+    int trimes, resto;
 
     cout<<"ingrese el numero del mes: "<<endl;
     cin>>nmes;
@@ -24,13 +20,13 @@ int main(){
     switch (resto)
 {
 case 0:
-    bimes=nmes/2;
+    trimes=nmes/3;
     break;
 default:
-    bimes=(nmes/3)+1;
+    trimes=(nmes/3)+1;
     break;
 }
- cout<<"el mes ingresado correspode al trimestre numero "<<bimes;
+ cout<<"el mes ingresado correspode al trimestre numero "<<trimes;
 
     getch ();
     return 0;
