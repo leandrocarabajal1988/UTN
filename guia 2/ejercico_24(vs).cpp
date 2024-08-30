@@ -7,7 +7,7 @@ int main(){
     /*variables:
     nmes: numero de mes
     trimes: grupo de trimestre
-    
+    resto: guarda el resto de la division.    
     */
     int nmes;
     int trimes, resto;
@@ -30,9 +30,4 @@ default:
 
     getch ();
     return 0;
-
-
-
-
-
 }

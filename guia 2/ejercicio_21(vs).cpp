@@ -15,7 +15,7 @@ int tipocartera, cantidad;
 int acu1=45, acu2=50, acu3=40, acu4=49,acuventas1=0,acuventas2=0,acuventas3=0,acuventas4=0, total;
 
     
-for (int i = 0; i < 3; i++)
+for (int i = 1; i <= 3; i++)
 {
     cout<<"ingrese el tipo de carteras vendida"<<endl;
     cout<<" (1-blanco, 2-negro, 3-marron, 4-gris): "<<endl;
