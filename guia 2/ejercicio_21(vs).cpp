@@ -67,7 +67,7 @@ if(acuventas3==0){
 cout<<"no se vendieron carteras marrones"<<endl;
 }
 if(acuventas4==0){
-cout<<"no se vendieron carteras grices";
+cout<<"no se vendieron carteras grises";
 }
 
 getch();
