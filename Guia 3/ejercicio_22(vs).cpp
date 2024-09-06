@@ -4,34 +4,45 @@ using namespace std;
 int main(){
 
 bool bpar=true;
-int ipos, ipar, iultimoprimo, inumero, ipospar, iposultimoprimo;
-int contarprimo=0;
+int iorden, ipar, iultimoprimo, inumero, ipospar, iposultimoprimo;
+int contdivisor=0;
 
 for (int i = 1; i <=7; i++)
 {
-    cout << "inrgesa el numero " << i << " de la lista de 7 numeros." << endl;
+    cout <<"ingrese el numero " << "i" <<" de la lista de 7 numeros." << endl;
     cin >> inumero;
-    ipos=i;
-    /*//analizo si es el primer par//
-    if((inumero%2==0) && bpar){
-        ipar=inumero;
-        ipospar=i;
-        bpar=false;
-    }*/
-    //busco el ultimo numero primo//
-    for (int j = 1; j <=inumero; j++)
+    iorden=i;
+
+    //busco el ultimo N primo //
+    for (int j=1; j <=inumero; j++)
     {
-        if(inumero % j == 0){
-            contarprimo++;
+        if(j==1){
+            contdivisor=0;
+            if(inumero%j==0){
+                contdivisor++;
+            }
         }
-     }
-    if(contarprimo==2){
+        else if(inumero%j==0){
+            contdivisor++;
+    }
+    }
+    if (contdivisor==2){
         iultimoprimo=inumero;
-        iposultimoprimo=ipos;
+        iposultimoprimo=iorden;
+    }
+    //busco el primer N par//
+    if (bpar){
+        if(inumero%2==0){
+        ipar=inumero;
+        ipospar=iorden;
+        bpar=false;
+        }
     }
 }
-cout << "el primer numero par ingresado es :" << ipar << " ubicacion " << ipospar <<endl;
-cout << "el ultimo numero primo ingresado es : " <<iultimoprimo << " ubicacion " << iposultimoprimo << endl;
+//resultados//
+cout << "el primer numero par ingresado es: " << ipar << " en la ubicacion: " << ipospar << endl;    
+cout << "el ultimo numero primo ingresado es : " << iultimoprimo << " en la ubicacion: " << iposultimoprimo << endl;
+
 
 getch ();
 return 0;
