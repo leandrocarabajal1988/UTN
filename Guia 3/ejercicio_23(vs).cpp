@@ -19,7 +19,7 @@ for (int i = 1; i <=10; i++)
         }
     }
     else if (numero%2!=0){
-            impar=true;
+        impar=true;
     }
 
 }
