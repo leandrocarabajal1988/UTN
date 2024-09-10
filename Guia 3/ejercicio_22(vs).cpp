@@ -9,7 +9,7 @@ int contdivisor=0;
 
 for (int i = 1; i <=7; i++)
 {
-    cout <<"ingrese el numero " << "i" <<" de la lista de 7 numeros." << endl;
+    cout <<"ingrese el numero " << i <<" de la lista de 7 numeros." << endl;
     cin >> inumero;
     iorden=i;
 
