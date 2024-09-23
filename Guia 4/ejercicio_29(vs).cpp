@@ -207,6 +207,39 @@ cout << endl << endl;
 if ((consumomin1==0) && (consumomin2==0) && (consumomin3==0)){
     cout <<"no se consumio nada en ninguna localidad." <<endl;
 }
+else if(consumomin1==0){
+    if(consumomin2==0){
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin3<< endl;
+        }
+    else if(consumomin3==0){
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin2<< endl;
+    }
+    else if(consumomin2<consumomin3){
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin2<< endl;
+    }
+    else{
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin3<< endl;
+    }
+}
+else if(consumomin2==0){
+    if(consumomin3==0){
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin1<< endl;
+        }
+    else if(consumomin1<consumomin3){
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin1<< endl;
+    }
+    else{
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin3<< endl;
+    }
+}
+else if(consumomin3==0){
+    if(consumomin1<consumomin2){
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin1<< endl;
+    }
+    else{
+        cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin2<< endl;
+    }
+}
 else if ((consumomin1<=consumomin2) && (consumomin1<=consumomin3)){
     cout << "el cliente con menor consumo de todas las localidades es el cliente: " <<clientemin1<< endl;
 }
