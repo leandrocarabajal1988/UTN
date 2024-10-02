@@ -30,7 +30,7 @@ int numeroArmstrong(int numero){
 /// elevar cada caracter a la cantidad de caracteres y sumarlos
     for (int j = 0; j <=i; j++)
     {
-        suma+=exponencial(caracter[i+j], i);
+        suma+=exponencial(caracter[j], i);
     }
     return suma;
 }
