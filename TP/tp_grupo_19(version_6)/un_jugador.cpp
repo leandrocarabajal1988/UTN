@@ -26,25 +26,34 @@ string nombre = ingresar_Nombre();
 
 maestro( dados_restantes, nombre);
 
-rlutil::locate(45, 20);
-cout<<" cuando estes listo, presiona una tecla";
+borrar_mensajes_sistemas();
+rlutil::locate(108, 12);
+rlutil::setColor(rlutil::GREY);
+cout<<"-cuando estes listo";
+rlutil::locate(108, 14);
+cout<< "-presiona una tecla";
+rlutil::setColor(rlutil::BLACK);
 rlutil::anykey();
+
 
 system("cls");
 plantilla (cont_rondas, nombre, cont_rondas);
 
 int vdefensa[dados_defensores];
 
-lanzar_Dados_Defensores(vdefensa, dados_defensores, nombre, 45, 15);
+lanzar_Dados_Defensores(vdefensa, dados_defensores, nombre, 45, 15);//borra pantalla.
 
 plantilla (cont_rondas, nombre, cont_rondas);
 
-//borra pantalla.
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa);
 
-    tirar_dados_sin_sombra(9, 13, dados_defensores, vdefensa);
-
-rlutil::locate(45, 13);
-cout<<"Ahora presiona una tecla para lanzar los dados de ataque.";
+borrar_mensajes_sistemas();
+rlutil::locate(108, 12);
+rlutil::setColor(rlutil::GREY);
+cout<<"Ahora presiona una tecla";
+rlutil::locate(108, 14);
+cout<< "para lanzar el ataque";
+rlutil::anykey();
 
 bool continuar=1;
 int duplicador;
@@ -52,30 +61,17 @@ do{
 cont_rondas++;
 
 do{
+    plantilla (cont_rondas, nombre, cont_rondas);
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa);
 
 int vataque[dados_restantes];
-lanzar_Dados_Atacantes(vataque, dados_restantes, nombre, 15, 9);
+lanzar_Dados_Atacantes(vataque, dados_restantes, nombre,40 ,15);
 
 plantilla (cont_rondas, nombre, cont_rondas);
 
+    tirar_dados_sin_sombra(40, 13, dados_restantes, vataque);
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa);
 
-
-rlutil::anykey();
-rlutil::anykey();
-rlutil::anykey();
-//borra pantalla
-
-
-cout<<" DADOS DEFENSORES ";
-    tirar_dados_sin_sombra(21, 6, dados_defensores, vdefensa);
-
-rlutil::locate(2, 12);
-cout<<" DADOS ATACANTES  ";
-tirar_dados_sin_sombra(21, 11, dados_restantes, vataque);
-
-sleep(1);
-rlutil::locate(2, 18);
-cout<<" DADOS RESTANTES" ;
 sleep(1);
 
 int cont_dado_eliminado=0;
@@ -94,7 +90,16 @@ for(int i=0; i<dados_restantes; i++){
     }
 }
 
-tirar_dados_sin_sombra(21, 17, dados_restantes, vdados_vivos);
+rlutil::setColor(rlutil::GREY);
+borrar_mensajes_sistemas();
+rlutil::locate(108, 12);
+cout<<"Veamos los resultados";
+rlutil::locate(108, 14);
+cout<<"presiona una tecla";
+rlutil::anykey();
+
+borrar_mensajes_sistemas();
+tirar_dados_sin_sombra(40, 33, dados_restantes, vdados_vivos);
 
 dados_restantes-=cont_dado_eliminado;
 puntos_totales+=puntos_ronda;
@@ -103,34 +108,52 @@ if(puntos_ronda>mayor_puntaje){
     mayor_puntaje=puntos_ronda;
 }
 if(duplicador==2){
+        rlutil::locate(15, 13);
         cout<<"Tuvimos suerte, duplicamos los puntos de la ronda!!"<<endl;
 }
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 12);
+cout<<"  RESULTADOA DE LA BATALLA";
+rlutil::locate(108, 14);
+cout<<"Dados perdidos en batalla "<<cont_dado_eliminado;
 
-rlutil::locate(2, 21);
-cout<<"--------------ESTE ES EL RESULTADO DE LA BATALLA--------------"<<endl;
-
-cout<< endl<<endl;
-cout<<"Dados perdidos en la batalla "<<cont_dado_eliminado<<endl;
-cout<< endl;
+rlutil::setColor(rlutil::BLUE);
+rlutil::locate(108, 3);
 animo(cont_dado_eliminado,  cont_rondas, dados_restantes);
-cout<<endl<<endl;
 
-cout<<"tus puntos en esta ronda son: " <<puntos_ronda<<endl<<"puntos totales "<<puntos_totales<<endl;;
-cout<<"te restan "<<dados_restantes<<" dados para seguir jugando...."<<endl<<endl<<"\t \t";
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 16);
+cout<< "Puntos de ronda : " <<puntos_ronda;
+rlutil::locate(108, 18);
+cout<< "Puntos totales "<<puntos_totales;
+rlutil::locate(108, 20);
+cout<<"Dados restantes: "<<dados_restantes;
 cout<<endl;
 if (dados_restantes>0){
         if(duplicador==2){
-            cout<<"Como duplicamos estamos obligados a volver a jugar, suerte!" <<endl;
+            rlutil::locate(108, 26);
+            rlutil::setColor(rlutil::BLUE);
+            cout<<"Duplicaste tus puntos.";
+            rlutil::locate(108, 28);
+            cout<< "y tenes un tiro extra!";
+            rlutil::locate(108, 30);
+            cout<< "Presiona una tecla y lanza" <<endl;
             continuar=1;
+            rlutil::setColor(rlutil::BLACK);
             cout<<endl;
-            system("pause");
+            rlutil::anykey();
             system("cls");
 
         }
         else{
-            cout<<"\t\t Deseas seguir?"<<endl;
-            cout<<" 1-Seguir otra ronda, 0-Abandonar partida!"<<endl;
+            rlutil::locate(108, 26);
+            cout<<"Deseas seguir?";
+            rlutil::locate(108, 28);
+            cout<<"1-Seguir otra ronda";
+            rlutil::locate(108, 30);
+            cout<<"0-Abandonar partida!"<<endl;
             cin>>continuar;
+            rlutil::setColor(rlutil::BLACK);
             cout<<endl;
             system("cls");
         }
@@ -144,19 +167,30 @@ while(duplicador==2);
 while((dados_restantes>0) && (continuar));
 
 if (dados_restantes>0){
-    rlutil::locate(2, 2);
-    cout<< " "<<nombre<<" GRACIAS POR JUGAR!!"<< endl <<endl;
-    cout<< " Estas son tus estadisticas de la partida"<<endl;
-    cout<< " rondas jugadas "<<cont_rondas<<endl<<endl;
-    cout<< " Mayor puntaje en una ronda "<<mayor_puntaje<<endl<<endl;
-    cout<< " Puntos totales "<<puntos_totales<<endl;
-    cout<< endl;
+    plantilla (cont_rondas, nombre, cont_rondas);
+    rlutil::locate(54, 15);
+    cout<<nombre<<" GRACIAS POR JUGAR!!";
+    rlutil::locate(40, 17);
+    cout<< "Estas son tus estadisticas de la partida"<<endl;
+    rlutil::locate(40, 19);
+    cout<< "Rondas jugadas "<<cont_rondas<<endl<<endl;
+    rlutil::locate(40, 21);
+    cout<< "Mayor puntaje en una ronda "<<mayor_puntaje<<endl<<endl;
+    rlutil::locate(40, 23);
+    cout<< "Puntos totales "<<puntos_totales<<endl;
+
+
 }
 else{
-    cout<<"fin del juego"<<endl;
-    cout<<"vulve a intentarlo!"<<endl;
+    rlutil::locate(54, 26);
+    cout<<"fin del juego";
+    rlutil::locate(54, 28);
+    cout<<"vulve a intentarlo!";
+
 }
-cout<<"Regresar al menu principal, ";
+    rlutil::locate(40, 30);
+cout<<"Regresar al menu principal, "<<endl;
+rlutil::locate(40, 32);
 system("pause");
 }
 
@@ -170,48 +204,54 @@ system("pause");
 string ingresar_Nombre() {
 
     string nombre;
-    rlutil::locate(45, 12);
+    rlutil::setColor(rlutil::GREY);
+    rlutil::locate(108, 12);
     texto_letras(" -Bienvenido jugador!", 10000);
-    rlutil::locate(45, 13);
+    rlutil::locate(108, 13);
     texto_letras(" -Como debemos llamarte?", 10000);
 
-    rlutil::setColor(rlutil::WHITE);
-    rlutil::locate(80, 14);
+    rlutil::setColor(rlutil::BLUE);
+    rlutil::locate(108, 15);
     cout<< " - Mi nombre es ";
     cin.ignore();
     getline(cin, nombre);
 
-    rlutil::setColor(rlutil::BLACK);
-    rlutil::locate(45, 17);
+    rlutil::setColor(rlutil::GREY);
+    rlutil::locate(108, 17);
     cout<< "- "<< nombre;
-    texto_letras(" !! te deseamos mucha suerte en tu juego!!", 10000);
+    texto_letras(" mucha suerte !!", 10000);
     cout<< endl;
+    rlutil::setColor(rlutil::BLACK);
     return nombre;
 }
 
 // --------------------FUNCION LANZAR DADOS DEFENSORES ---------------------------------
 void lanzar_Dados_Defensores(int vdefensa[], int dados_defensores, string nombre, int posx,int posy) {
-    rlutil::locate(45, 9);
-    cout<<"Lanzando dados defensores de "<<nombre;
+    borrar_mensajes_sistemas();
+    rlutil::locate(108, 12);
+    rlutil::setColor(rlutil::GREY);
+    cout<<"Lanzando dados defensores...";
 
     rlutil::locate(posx, posy+3);
     vtirada_defensores(vdefensa, dados_defensores);
 
     tirar_dados_sombra(posx, posy, dados_defensores, vdefensa);
-    sleep(1);
+    rlutil::setColor(rlutil::BLACK);
 }
 
 
 // --------------------FUNCION LANZAR DADOS ATACANTES --------------------------------
 void lanzar_Dados_Atacantes(int vataque[], int dados_restantes, string nombre, int posx,int posy) {
-    rlutil::locate(45, 9);
-    cout << "Lanzando los dados atacantes de " <<nombre;
+    borrar_mensajes_sistemas();
+    rlutil::locate(108, 12);
+    rlutil::setColor(rlutil::GREY);
+    cout << "Lanzando los dados atacantes";
     cout << endl;
 
     vtirada_atacantes(vataque, dados_restantes);
 
     tirar_dados_sombra(posx, posy, dados_restantes, vataque);
-    sleep(1);
+    rlutil::setColor(rlutil::BLACK);
 }
 
 //-----------------------FUNCION MOSTRAR VECTOR DADOS DEFENSORES----------------------------

@@ -11,3 +11,7 @@ void mover_cursor (int x, int y);
 void armar_cuadro (int xinicial, int yinicial, int ancho, int largo, string color, string color_fondo);
 void armar_cuadro_doble (int xinicial, int yinicial, int ancho, int largo, string color, string color_fondo);
 void plantilla (int ronda_numero, string nombre, int tirada);
+void armar_cuadro_doble_azul (int xinicial, int yinicial, int ancho, int largo, string color, string color_fondo);
+void armar_cuadro_doble_rojo (int xinicial, int yinicial, int ancho, int largo, string color, string color_fondo);
+void armar_cuadro_doble_gris (int xinicial, int yinicial, int ancho, int largo, string color, string color_fondo);
+void borrar_mensajes_sistemas();

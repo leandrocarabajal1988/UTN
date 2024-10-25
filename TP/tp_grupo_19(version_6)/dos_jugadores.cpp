@@ -26,68 +26,88 @@ int mayor_puntaje2=0;
 string nombre1;
 string nombre2;
 //-----------------------------------------INGRESO DE JUGARORES----------------------------------------
-cout<<endl;
-cout<<"\t "<<"\t "<<"\t "<<"BIENVENIDOS JUGADORES!"<<endl<<endl;
-cout<<"\t"<<"jugador numero uno, Por favor dinos tu nombre?"<<endl<<endl;
+plantilla (cont_rondas, "jugador misterioso 1", cont_tirada1);
+
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 12);
+texto_letras("BIENVENIDOS JUGADORES!", 10000);
+rlutil::locate(108, 14);
+texto_letras("Primer lanzador", 1000);
+rlutil::locate(108, 16);
+texto_letras("Por favor dinos tu nombre", 10000);
+rlutil::locate(108, 18);
+rlutil::setColor(rlutil::BLUE);
+cout<< "Yo soy ";
 cin.ignore();
 getline(cin, nombre1);
-cout<< endl << endl;
-
-cout<<"\t"<<"Ahora es el turno del jugador numero dos, como es tu nombre?"<<endl<<endl;
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 20);
+texto_letras("Siguiente lanzador", 10000);
+rlutil::locate(108, 22);
+texto_letras("como te llamas?", 10000);
+rlutil::locate(108, 24);
+rlutil::setColor(rlutil::RED);
+cout<< "Mi nombre es ";
 getline(cin, nombre2);
-cout<< endl << endl;
-cout<<"\t \t"<<nombre1<<" y "<<nombre2<<" !!Les deseamos mucha suerte a ambos!!"<<endl;
-cout<< endl <<nombre1<<"  Tu vas a comenzar, cuando te sientas listo preciona cualquier tecla";
-rlutil::anykey();
+rlutil::locate(108, 26);
+rlutil::setColor(rlutil::GREY);
+texto_letras("Suerte a ambos!!", 10000);
+rlutil::locate(108, 28);
+cout<<nombre1;
+texto_letras(" vas a comenzar", 10000);
+rlutil::locate(108, 30);
 
+cout<<"Preciona cualquier tecla";
+rlutil::anykey();
+rlutil::setColor(rlutil::BLACK);
 system("cls");
 //------------------------------------------ETAPA DADOS DEFENSORES-----------------------------------
-rlutil::locate(2, 2);
+plantilla (cont_rondas, nombre1, cont_tirada1);
 
 int vdefensa1[dados_defensores];
-sleep(1);
-lanzar_Dados_Defensores(vdefensa1, dados_defensores, nombre1, 45, 12);
-//borra pantalla.
 
-rlutil::locate(2, 7);
+lanzar_Dados_Defensores(vdefensa1, dados_defensores, nombre1, 45, 15);//borra pantalla.
 
-cout<<" DADOS DEFENSORES "<< endl;
-cout<< "  "<< nombre1;
-    tirar_dados_sin_sombra(21, 6, dados_defensores, vdefensa1);
+plantilla (cont_rondas, nombre1, cont_tirada1);
 
-rlutil::locate(2, 11);
-cout<< endl << endl;
-cout<<"Ahora es tu turno "<<nombre2<<" Lanza tus dados defensores "<<endl;
-cout<<endl<<nombre2<<"  Cuando te sientas listo preciona cualquier tecla"<<endl;
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa1);
+
+borrar_mensajes_sistemas(),
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 12);
+texto_letras("Es tu turno ", 10000);
+cout<<nombre2;
+rlutil::locate(108, 14);
+texto_letras("Lanza tus dados defensores", 10000);
+rlutil::locate(108, 16);
+texto_letras("Presiona cualquier tecla", 10000);
 rlutil::anykey();
-cout<<endl;
+rlutil::setColor(rlutil::BLACK);
+rlutil::cls();
+
+plantilla (cont_rondas, nombre1, cont_tirada1);
 
 int vdefensa2[dados_defensores];
-sleep(1);
-rlutil::locate(2, 4);
-lanzar_Dados_Defensores(vdefensa2, dados_defensores, nombre2, 12, 17);
-//borra pantalla.
 
-rlutil::locate(2, 7);
+    lanzar_Dados_Defensores(vdefensa2, dados_defensores, nombre2, 45, 15);//borra pantalla.
 
-cout<<" DADOS DEFENSORES "<< endl;
-cout<< "  "<< nombre1;
-    tirar_dados_sin_sombra(21, 6, dados_defensores, vdefensa1);
+plantilla (cont_rondas, nombre2, cont_tirada2);
 
-rlutil::locate(2, 15);
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa2);
 
-cout<<" DADOS DEFENSORES "<< endl;
-cout<< "  "<< nombre2;
-tirar_dados_sin_sombra(21, 14, dados_defensores, vdefensa2);
-
-rlutil::locate(2, 20);
-cout<<"\t \t"<< "Excelente!! Avancemos con las rondas de ataque y que gane el mejor!! "<<endl;
-cout<<" Si ta estan listos presionen cualquier tecla";
+borrar_mensajes_sistemas();
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 12);
+texto_letras("Excelente!!", 10000);
+rlutil::locate(108, 14);
+cout<<nombre1;
+texto_letras(" atacas primero", 10000);
+rlutil::locate(108, 16);
+cout<<"Presiona cualquier tecla";
 rlutil::anykey();
 
 //--------------------------------------ETAPA DADAOS ATACANTES JUGADOR UNO-----------------------------------
 system("cls");
-
 
 do{
 cont_rondas++;
@@ -96,34 +116,21 @@ dados_restantes2=5;
 bool continuar1=1;
 bool continuar2=1;
 int duplicador;
+
 do{//para jugador 1
-    cont_tirada1++;
-cout<<endl;
-cout<<"======================= RONDA NUMERO "<<cont_rondas<<" ======================="<<endl<<endl;
-cout<<"========================= JUGADOR "<<nombre1<<"  ======================="<<endl;
-cout<<"======================= TIRADA NUMERO "<<cont_tirada1<<" ======================="<<endl<<endl;
+cont_tirada1++;
 
-    int vataque1[dados_restantes1];
-    lanzar_Dados_Atacantes(vataque1, dados_restantes1, nombre1,12 , 17);
+plantilla (cont_rondas, nombre1, cont_tirada1);
 
-//borra la pantalla
-cout<<endl;
-cout<<"======================= RONDA NUMERO "<<cont_rondas<<" ======================="<<endl<<endl;
-cout<<"========================= JUGADOR "<<nombre1<<"  ======================="<<endl;
-cout<<"======================= TIRADA NUMERO "<<cont_tirada1<<" ======================="<<endl<<endl;
-    rlutil::locate(2, 8);
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa1);
 
-cout<<" DADOS DEFENSORES "<< endl;
-cout<< "  "<< nombre1;
-    tirar_dados_sin_sombra(21, 7, dados_defensores, vdefensa1);
+int vataque1[dados_restantes1];
+    lanzar_Dados_Atacantes(vataque1, dados_restantes1, nombre1, 40, 15);//borra la pantalla
 
-rlutil::locate(2, 13);
-cout<<" DADOS ATACANTES  ";
-    tirar_dados_sin_sombra(21, 11, dados_restantes1, vataque1);
+plantilla (cont_rondas, nombre1, cont_tirada1);
 
-rlutil::locate(2, 18);
-cout<<" DADOS RESTANTES" ;
-sleep(1);
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa1);
+    tirar_dados_sin_sombra(40, 13, dados_restantes1, vataque1);
 
 int cont_dado_eliminado1=0;
 int puntos_ronda1=0;
@@ -141,8 +148,16 @@ for(int i=0; i<dados_restantes1; i++){
         puntos_ronda1+=(vdados_vivos1[i]*duplicador);
     }
 }
+rlutil::setColor(rlutil::GREY);
+borrar_mensajes_sistemas();
+rlutil::locate(108, 12);
+cout<<"Veamos los resultados";
+rlutil::locate(108, 14);
+cout<<"presiona una tecla";
+rlutil::anykey();
 
-tirar_dados_sin_sombra(21, 17, dados_restantes1, vdados_vivos1);
+borrar_mensajes_sistemas();
+tirar_dados_sin_sombra(40, 33, dados_restantes1, vdados_vivos1);
 
 dados_restantes1-=cont_dado_eliminado1;
 if(dados_restantes1>0){
@@ -153,43 +168,56 @@ if(puntos_ronda1>mayor_puntaje1){
     mayor_puntaje1=puntos_ronda1;
 }
 if(duplicador==2){
+        rlutil::locate(40, 12);
         cout<<"Tuviste suerte, duplicaste los puntos de la ronda!!"<<endl;
 }
-rlutil::locate(2, 22);
-cout<<"--------------ESTE ES EL RESULTADO DE LA BATALLA--------------"<<endl;
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 12);
+cout<<"  RESULTADOA DE LA BATALLA";
+rlutil::locate(108, 14);
+cout<<"Dados perdidos en batalla: "<<cont_dado_eliminado1;
 
-cout<< endl<<endl;
-cout<<"Dados perdidos en la batalla "<<cont_dado_eliminado1<<endl;
+rlutil::setColor(rlutil::BLUE);
+rlutil::locate(108, 3);
+animo_vs (cont_dado_eliminado1, cont_rondas, dados_restantes1, puntos_totales1, puntos_totales2, nombre1);
 
-animo_vs(cont_dado_eliminado1, cont_tirada1, dados_restantes1, puntos_totales1, puntos_totales2, nombre1);
-
-cout<<endl<<endl;
-cout<<"tus puntos en esta ronda son: " <<puntos_ronda1<<endl<<"puntos totales "<<puntos_totales1<<endl;
-cout<<"te restan "<<dados_restantes1<<" dados para seguir jugando...."<<endl<<endl<<"\t \t";
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 16);
+cout<< "Puntos de ronda : " <<puntos_ronda1;
+rlutil::locate(108, 18);
+cout<< "Puntos totales "<<puntos_totales1;
+rlutil::locate(108, 20);
+cout<<"Dados restantes: "<<dados_restantes1;
 cout<<endl;
 if (dados_restantes1>0){
         if(duplicador==2){
-            cout<<"Como duplicamos estamos obligados a volver a jugar, suerte!" <<endl;
+            rlutil::locate(108, 26);
+            rlutil::setColor(rlutil::BLUE);
+            cout<<"Duplicaste tus puntos.";
+            rlutil::locate(108, 28);
+            cout<< "y tenes un tiro extra!";
+            rlutil::locate(108, 30);
+            cout<< "Presiona una tecla y lanza" <<endl;
             continuar1=1;
-            cout<<endl;
-            system("pause");
-            system("cls");
 
+            rlutil::setColor(rlutil::BLACK);
+            rlutil::anykey();
+            system("cls");
         }
         else{
-            cout<<"\t\t Deseas seguir?"<<endl;
-            cout<<" 1-Volver a tirar, 0-Abandonar tirada!"<<endl;
+            rlutil::locate(108, 26);
+            cout<<"Deseas seguir?";
+            rlutil::locate(108, 28);
+            cout<<"1-Seguir otra ronda";
+            rlutil::locate(108, 30);
+            cout<<"0-Abandonar!"<<endl;
             cin>>continuar1;
-            if(continuar1==0){
-                cont_tirada1=0;
-            }
-            cout<<endl;
+            rlutil::setColor(rlutil::BLACK);
             system("cls");
         }
-}
-else{
+    }
+    else{
     continuar1=0;
-    cont_tirada1=0;
     system("pause");
     system("cls");
 }
@@ -197,35 +225,20 @@ else{
 while((duplicador==2) || ((continuar1==1) && (dados_restantes1>0)));
 /////////////////////////////////////////////////////////////////////////////////
 //-------------------------------------ETAPA DE ELIMINACION DE DADOS JUGADOR DOS---------------------------------
-cout<<endl;
 do{//para jugador 2
-    cont_tirada2++;
-cout<<endl;
-cout<<"======================= RONDA NUMERO "<<cont_rondas<<" ======================="<<endl<<endl;
-cout<<"========================= JUGADOR "<<nombre2<<"  ======================="<<endl;
-cout<<"======================= TIRADA NUMERO "<<cont_tirada2<<" ======================="<<endl<<endl;
+cont_tirada2++;
 
-    int vataque2[dados_restantes2];
-    lanzar_Dados_Atacantes(vataque2, dados_restantes2, nombre2, 15, 9);
+plantilla (cont_rondas, nombre2, cont_tirada2);
 
-//borra la pantalla
-cout<<endl;
-cout<<"======================= RONDA NUMERO "<<cont_rondas<<" ======================="<<endl<<endl;
-cout<<"========================= JUGADOR "<<nombre2<<"  ======================="<<endl;
-cout<<"======================= TIRADA NUMERO "<<cont_tirada2<<" ======================="<<endl<<endl;
-    rlutil::locate(2, 8);
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa2);
 
-cout<<" DADOS DEFENSORES "<< endl;
-cout<< "  "<< nombre2;
-    tirar_dados_sin_sombra(21, 7, dados_defensores, vdefensa2);
+int vataque2[dados_restantes2];
+    lanzar_Dados_Atacantes(vataque2, dados_restantes2, nombre2,40 , 15);//borra la pantalla
 
-rlutil::locate(2, 13);
-cout<<" DADOS ATACANTES  ";
-    tirar_dados_sin_sombra(21, 11, dados_restantes2, vataque2);
+plantilla (cont_rondas, nombre2, cont_tirada2);
 
-rlutil::locate(2, 18);
-cout<<" DADOS RESTANTES" ;
-sleep(1);
+    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa2);
+    tirar_dados_sin_sombra(40, 13, dados_restantes2, vataque2);
 
 int cont_dado_eliminado2=0;
 int puntos_ronda2=0;
@@ -243,8 +256,16 @@ for(int i=0; i<dados_restantes2; i++){
         puntos_ronda2+=(vdados_vivos2[i]*duplicador);
     }
 }
+rlutil::setColor(rlutil::GREY);
+borrar_mensajes_sistemas();
+rlutil::locate(108, 12);
+cout<<"Veamos los resultados";
+rlutil::locate(108, 14);
+cout<<"presiona una tecla";
+rlutil::anykey();
 
-tirar_dados_sin_sombra(21, 17, dados_restantes2, vdados_vivos2);
+borrar_mensajes_sistemas();
+tirar_dados_sin_sombra(40, 33, dados_restantes2, vdados_vivos2);
 
 dados_restantes2-=cont_dado_eliminado2;
 if(dados_restantes2>0){
@@ -255,82 +276,113 @@ if(puntos_ronda2>mayor_puntaje2){
     mayor_puntaje2=puntos_ronda2;
 }
 if(duplicador==2){
+        rlutil::locate(15, 13);
         cout<<"Tuviste suerte, duplicaste los puntos de la ronda!!"<<endl;
 }
-rlutil::locate(2, 22);
-cout<<"--------------ESTE ES EL RESULTADO DE LA BATALLA--------------"<<endl;
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 12);
+cout<<"  RESULTADOA DE LA BATALLA";
+rlutil::locate(108, 14);
+cout<<"Dados perdidos en batalla: "<<cont_dado_eliminado2;
 
-cout<< endl<<endl;
-cout<<"Dados perdidos en la batalla "<<cont_dado_eliminado2<<endl;
+rlutil::setColor(rlutil::BLUE);
+rlutil::locate(108, 3);
+animo_vs (cont_dado_eliminado2, cont_rondas, dados_restantes2, puntos_totales1, puntos_totales2, nombre2);
 
-animo_vs(cont_dado_eliminado2, cont_tirada2, dados_restantes2, puntos_totales1, puntos_totales2, nombre2);
-
-cout<<endl<<endl;
-cout<<"tus puntos en esta ronda son: " <<puntos_ronda2<<endl<<"puntos totales "<<puntos_totales2<<endl;
-cout<<"te restan "<<dados_restantes2<<" dados para seguir jugando...."<<endl<<endl<<"\t \t";
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 16);
+cout<< "Puntos de ronda: " <<puntos_ronda2;
+rlutil::locate(108, 18);
+cout<< "Puntos totales "<<puntos_totales2;
+rlutil::locate(108, 20);
+cout<<"Dados restantes: "<<dados_restantes2;
 cout<<endl;
 if (dados_restantes2>0){
         if(duplicador==2){
-            cout<<"Como duplicamos estamos obligados a volver a jugar, suerte!" <<endl;
+            rlutil::locate(108, 26);
+            rlutil::setColor(rlutil::BLUE);
+            cout<<"Duplicaste tus puntos.";
+            rlutil::locate(108, 28);
+            cout<< "y tenes un tiro extra!";
+            rlutil::locate(108, 30);
+            cout<< "Presiona una tecla y lanza" <<endl;
             continuar2=1;
-            cout<<endl;
-            system("pause");
+            rlutil::setColor(rlutil::BLACK);
+            rlutil::anykey();
             system("cls");
-
         }
         else{
-            cout<<"\t\t Deseas seguir?"<<endl;
-            cout<<" 1-Volver a tirar, 0-Abandonar tirada!"<<endl;
+            rlutil::locate(108, 26);
+            cout<<"Deseas seguir?";
+            rlutil::locate(108, 28);
+            cout<<"1-Seguir otra ronda";
+            rlutil::locate(108, 30);
+            cout<<"0-Abandonar partida!"<<endl;
             cin>>continuar2;
-            if(continuar2==0){
-                cont_tirada2=0;
-            }
+            rlutil::setColor(rlutil::BLACK);
             cout<<endl;
             system("cls");
         }
-}
-else{
+    }
+    else{
     continuar2=0;
-    cont_tirada2=0;
     system("pause");
     system("cls");
 }
-
 }
-while((duplicador==2) || ((continuar1==1) && (dados_restantes1>0)));
+while((duplicador==2) || ((continuar2==1) && (dados_restantes2>0)));
 }
 while(cont_rondas<2);////////// MODIFICAR ESTO A 5 RONDAS AL FINALIZAR EL TP
-
-system("cls");
-cout<<endl;
-
-cout<<"\t \t LAS RONDAS DE BATALLAS HAN FINALIZADO!"<<endl;
+plantilla(0, "RESULTADOS", 0);
+rlutil::setColor(rlutil::GREY);
+rlutil::locate(108, 12);
+texto_letras("LAS BATALLAS HAN FINALIZADO!", 10000);
 if (puntos_totales1==puntos_totales2){
-    cout<< endl;
-    cout<<"\t \t NO PUEDO CREER, ES UN EMPATE!!"<<endl;
-    cout<<"\t \t Tenemos dos campeones!!"<<nombre1<<", "<<nombre2<<" avancen al podio para ver sus resultados"<<endl;
+    rlutil::locate(108, 14);
+    texto_letras("ES UN EMPATE!!", 10000);
+    rlutil::locate(108, 16);
+    texto_letras("Veamos sus resultados", 10000);
 }
 else if( puntos_totales1>puntos_totales2){
-    cout<< endl;
-    cout<<"\t \t Y tenemos un ganador! "<<nombre1<<" felicidades, fuiste el vencedor!"<<endl;
-    cout<<" veamos los reslutados finales"<<endl;
+    rlutil::locate(108, 14);
+    texto_letras("tenemos un ganador!", 10000);
+    rlutil::locate(108, 16);
+    cout<<nombre1;
+    texto_letras(" fuiste el vencedor!", 10000);
+    rlutil::locate(108, 18);
+    texto_letras("veamos los reslutados finales", 10000);
 }
 else {
-    cout<< endl;
-    cout<<"\t \t Y tenemos un ganador! "<<nombre2<<" felicidades, fuiste el vencedor!"<<endl;
-    cout<<" veamos los reslutados finales"<<endl;
+    rlutil::locate(108, 14);
+    texto_letras("tenemos un ganador!", 10000);
+    rlutil::locate(108, 16);
+    cout<<nombre2;
+    texto_letras(" fuiste el vencedor!", 10000);
+    rlutil::locate(108, 18);
+    texto_letras("veamos los reslutados finales", 10000);
 }
-cout<<" Rondas totales "<<cont_rondas<<endl<<endl;
-cout<<" Los puntos obtenidos por "<<nombre1<<" fueron "<<puntos_totales1<<endl<<endl;
-cout<<" Mayor puntaje en una ronda "<<mayor_puntaje1<<endl<<endl;
-cout<<" Los puntos obtenidos por "<<nombre2<<" fueron "<<puntos_totales2<<endl<<endl;
-cout<<" Mayor puntaje en una ronda "<<mayor_puntaje2<<endl<<endl;
-cout<<endl;
-cout<<"========================================================================================="<<endl;
-cout<<"                            MUCHAS GRACIAS POR JUGAR CON NOSOTROS :)"<<endl;
-cout<<"========================================================================================="<<endl;
-cout<<"Para volver al menu principal y tomar revancha presiona cualquier tecla";
-getch();
+rlutil::setColor(rlutil::BLACK);
+plantilla (0, "Resultados", 0);
+rlutil::locate(54, 15);
+cout<<nombre1<<" y "<<nombre2<<" GRACIAS POR JUGAR!!";
+rlutil::locate(40, 17);
+cout<< "Estas son tus estadisticas de la partida";
+rlutil::locate(40, 19);
+cout<<" Rondas totales "<<cont_rondas;
+rlutil::locate(40, 21);
+cout<<" Los puntos obtenidos por "<<nombre1<<" fueron "<<puntos_totales1;
+rlutil::locate(40, 23);
+cout<<" Mayor puntaje en una ronda "<<mayor_puntaje1;
+rlutil::locate(40, 25);
+cout<<" Los puntos obtenidos por "<<nombre2<<" fueron "<<puntos_totales2;
+rlutil::locate(40, 27);
+cout<<" Mayor puntaje en una ronda "<<mayor_puntaje2;
+rlutil::locate(40, 29);
+
+rlutil::locate(40, 30);
+cout<<"Regresar al menu principal, "<<endl;
+rlutil::locate(40, 32);
+system("pause");
 }
 
 

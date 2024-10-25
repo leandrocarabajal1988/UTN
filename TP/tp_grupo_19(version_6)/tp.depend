@@ -421,7 +421,7 @@
 	<string>
 	<unistd.h>
 
-1729790742 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\funciones_accesorios.h
+1729860264 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\funciones_accesorios.h
 	<unistd.h>
 
 1729805586 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\dados.cpp
@@ -431,7 +431,7 @@
 
 1729704029 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\dados.h
 
-1729806247 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\dos_jugadores.cpp
+1729877440 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\dos_jugadores.cpp
 	"un_jugador.h"
 	"dos_jugadores.h"
 	"dados.h"
@@ -446,7 +446,7 @@
 1729549836 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\dos_jugadores.h
 	<string>
 
-1729790742 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\funciones_accesorios.cpp
+1729870420 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\funciones_accesorios.cpp
 	"un_jugador.h"
 	"dos_jugadores.h"
 	"dados.h"
@@ -464,7 +464,7 @@
 1729616953 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\menu.h
 	<iostream>
 
-1729806140 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\un_jugador.cpp
+1729866713 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_6)\un_jugador.cpp
 	"un_jugador.h"
 	"dados.h"
 	<conio.h>
