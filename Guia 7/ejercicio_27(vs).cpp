@@ -73,6 +73,7 @@ for (int i = 0; i < 20; i++)
     cout<<"el total recaudado de la tarifa "<<(i+1)<<" es "<<vTarifaPorKilometro[i]<<endl;
 }
 cout<<endl;
+
 ///b) Un listado como el siguiente:
 ///Número Camión	Total recaudado (en $)
 
