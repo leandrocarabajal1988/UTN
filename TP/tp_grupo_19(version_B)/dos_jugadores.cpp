@@ -27,7 +27,7 @@ int dos_jugadores()
     string nombre1;
     string nombre2;
 //-----------------------------------------INGRESO DE JUGARORES----------------------------------------
-    plantilla (cont_rondas, "jugador misterioso 1", cont_tirada1);
+    plantilla (cont_rondas, "jugador misterioso 1", cont_tirada1, dados_restantes1, dados_defensores);
 
     rlutil::setColor(rlutil::GREY);
     rlutil::locate(108, 12);
@@ -63,11 +63,11 @@ int dos_jugadores()
     rlutil::setColor(rlutil::BLACK);
     system("cls");
 //---------------------------------------LANZAMIENTO DE DADOS DEFENSIVOS jugador 1------------------------
-    plantilla (cont_rondas, nombre1, cont_tirada1);
+    plantilla (cont_rondas, nombre1, cont_tirada1, dados_restantes1, dados_defensores);
     int vdefensa1[dados_defensores];
     lanzar_Dados_Defensores(vdefensa1, dados_defensores, nombre1, 45, 15);//borra pantalla.
-    plantilla (cont_rondas, nombre1, cont_tirada1);
-    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa1);
+    plantilla (cont_rondas, nombre1, cont_tirada1, dados_restantes1, dados_defensores);
+    tirar_dados_sin_sombra(5, 26, dados_defensores, vdefensa1);
 //----------------------------------------PANTALLA DE MENSAJE DE SISTEMA--------------------------
     borrar_mensajes_sistemas(),
     rlutil::setColor(rlutil::GREY);
@@ -82,11 +82,11 @@ int dos_jugadores()
     rlutil::setColor(rlutil::BLACK);
     rlutil::cls();
 //---------------------------------------LANZAMIENTO DE DADOS DEFENSIVOS jugador 2------------------------
-    plantilla (cont_rondas, nombre1, cont_tirada1);
+    plantilla (cont_rondas, nombre2, cont_tirada2, dados_restantes2, dados_defensores);
     int vdefensa2[dados_defensores];
     lanzar_Dados_Defensores(vdefensa2, dados_defensores, nombre2, 45, 15);//borra pantalla.
-    plantilla (cont_rondas, nombre2, cont_tirada2);
-    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa2);
+    plantilla (cont_rondas, nombre2, cont_tirada2, dados_restantes2, dados_defensores);
+    tirar_dados_sin_sombra(5, 26, dados_defensores, vdefensa2);
 //----------------------------------------PANTALLA DE MENSAJE DE SISTEMA--------------------------
     borrar_mensajes_sistemas();
     rlutil::setColor(rlutil::GREY);
@@ -113,12 +113,12 @@ int dos_jugadores()
         {
             cont_tirada1++;
 
-            plantilla (cont_rondas, nombre1, cont_tirada1);
-            tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa1);
+            plantilla (cont_rondas, nombre1, cont_tirada1, dados_restantes1, dados_defensores);
+            tirar_dados_sin_sombra(5, 26, dados_defensores, vdefensa1);
             int vataque1[dados_restantes1];
             lanzar_Dados_Atacantes(vataque1, dados_restantes1, nombre1, 40, 15);//borra la pantalla
           //---------------------(CADA VEZ QUE LANZO LOS DADOS LIMPIO LA PANTALLA)----------------
-            plantilla (cont_rondas, nombre1, cont_tirada1);
+            plantilla (cont_rondas, nombre1, cont_tirada1, dados_restantes1, dados_defensores);
             tirar_dados_sin_sombra(40, 13, dados_restantes1, vataque1);
 
             int cont_dado_eliminado1=0;
@@ -231,12 +231,12 @@ int dos_jugadores()
         {
             cont_tirada2++;
 
-            plantilla (cont_rondas, nombre2, cont_tirada2);
-            tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa2);
+            plantilla (cont_rondas, nombre2, cont_tirada2, dados_restantes2, dados_defensores);
+            tirar_dados_sin_sombra(5, 26, dados_defensores, vdefensa2);
             int vataque2[dados_restantes2];
             lanzar_Dados_Atacantes(vataque2, dados_restantes2, nombre2,40, 15); //borra la pantalla
          //---------------------(CADA VEZ QUE LANZO LOS DADOS LIMPIO LA PANTALLA)----------------
-            plantilla (cont_rondas, nombre2, cont_tirada2);
+            plantilla (cont_rondas, nombre2, cont_tirada2, dados_restantes2, dados_defensores);
             tirar_dados_sin_sombra(40, 13, dados_restantes2, vataque2);
 
             int cont_dado_eliminado2=0;
@@ -344,7 +344,7 @@ int dos_jugadores()
         while((duplicador==2) || ((continuar2==1) && (dados_restantes2>0)));
     }
     while(cont_rondas<2);////////// MODIFICAR ESTO A 5 RONDAS AL FINALIZAR EL TP
-    plantilla(0, "RESULTADOS", 0);
+    plantilla(0, "RESULTADOS", 0, 7, 3);
     rlutil::setColor(rlutil::GREY);
     rlutil::locate(108, 12);
     texto_letras("LAS BATALLAS HAN FINALIZADO!", 10000);
@@ -376,7 +376,7 @@ int dos_jugadores()
         texto_letras("veamos los reslutados finales", 10000);
     }
     rlutil::setColor(rlutil::BLACK);
-    plantilla (0, "Resultados", 0);
+    plantilla (0, "Resultados", 0, 7, 3);
     rlutil::locate(54, 15);
     cout<<nombre1<<" y "<<nombre2<<" GRACIAS POR JUGAR!!";
     rlutil::locate(40, 17);

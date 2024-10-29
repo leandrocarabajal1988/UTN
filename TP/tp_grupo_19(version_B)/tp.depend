@@ -517,7 +517,7 @@
 	<string>
 	<unistd.h>
 
-1730131009 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\funciones_accesorios.h
+1730215045 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\funciones_accesorios.h
 
 1730160619 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\dados.cpp
 	"dados.h"
@@ -541,7 +541,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1730167835 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\dos_jugadores.cpp
+1730215045 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\dos_jugadores.cpp
 	"un_jugador.h"
 	"dos_jugadores.h"
 	"dados.h"
@@ -556,7 +556,7 @@
 1729549836 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\dos_jugadores.h
 	<string>
 
-1730160619 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\funciones_accesorios.cpp
+1730225357 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\funciones_accesorios.cpp
 	"un_jugador.h"
 	"dos_jugadores.h"
 	"dados.h"
@@ -574,7 +574,7 @@
 1729616953 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\menu.h
 	<iostream>
 
-1730167835 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\un_jugador.cpp
+1730225429 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\un_jugador.cpp
 	"un_jugador.h"
 	"dados.h"
 	<conio.h>
@@ -595,7 +595,7 @@
 
 1729639037 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\sala_de_entrenamiento.h
 
-1730159039 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\sala_de_entrenamiento.cpp
+1730209733 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_b)\sala_de_entrenamiento.cpp
 	"un_jugador.h"
 	"dados.h"
 	<conio.h>

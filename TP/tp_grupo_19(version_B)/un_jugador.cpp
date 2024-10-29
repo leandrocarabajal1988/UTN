@@ -20,7 +20,7 @@ int un_jugador()
     int mayor_puntaje=0;
 
 //----------------------------------------INGRESO DE NOMBRE ----------------------------------------
-    plantilla (cont_rondas, "jugador misterioso", cont_rondas);
+    plantilla (cont_rondas, "jugador misterioso", cont_rondas,dados_restantes, dados_defensores);
     string nombre = ingresar_Nombre();
     maestro( dados_restantes, nombre);
     borrar_mensajes_sistemas();
@@ -34,13 +34,13 @@ int un_jugador()
     rlutil::anykey();
     system("cls");
 //---------------------------------------LANZAMIENTO DE DADOS DEFENSIVOS------------------------
-    plantilla (cont_rondas, nombre, cont_rondas);
+    plantilla (cont_rondas, nombre, cont_rondas,dados_restantes, dados_defensores);
     int vdefensa[dados_defensores];
     lanzar_Dados_Defensores(vdefensa, dados_defensores, nombre, 45, 15);
 
 //----------------------------(CADA VEZ QUE LANZO LOS DADOS LIMPIO LA PANTALLA)-------------------
-    plantilla (cont_rondas, nombre, cont_rondas);
-    tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa);
+    plantilla (cont_rondas, nombre, cont_rondas,dados_restantes, dados_defensores);
+    tirar_dados_sin_sombra(5, 25, dados_defensores, vdefensa);
 
     borrar_mensajes_sistemas();
     rlutil::locate(108, 12);
@@ -55,13 +55,13 @@ int un_jugador()
     do{
         cont_rondas++;
         do{
-            plantilla (cont_rondas, nombre, cont_rondas);
-            tirar_dados_sin_sombra(10, 25, dados_defensores, vdefensa);
+            plantilla (cont_rondas, nombre, cont_rondas,dados_restantes, dados_defensores);
+            tirar_dados_sin_sombra(5, 25, dados_defensores, vdefensa);
             int vataque[dados_restantes];
             lanzar_Dados_Atacantes(vataque, dados_restantes, nombre,40,15);
 
          //---------------------(CADA VEZ QUE LANZO LOS DADOS LIMPIO LA PANTALLA)----------------
-            plantilla (cont_rondas, nombre, cont_rondas);
+            plantilla (cont_rondas, nombre, cont_rondas,dados_restantes, dados_defensores);
             tirar_dados_sin_sombra(40, 13, dados_restantes, vataque);
 
             int cont_dado_eliminado=0;
@@ -164,7 +164,7 @@ int un_jugador()
     while((dados_restantes>0) && (continuar));
      //-------------------------------------FIN DE LA RONDA----------------------------------
     if (dados_restantes>0){
-        plantilla (cont_rondas, nombre, cont_rondas);
+        plantilla (cont_rondas, nombre, cont_rondas, 7, 3);
         rlutil::locate(54, 15);
         cout<<nombre<<" GRACIAS POR JUGAR!!";
         rlutil::locate(40, 17);
@@ -355,35 +355,26 @@ void maestro( int &dados_restantes, string nombre)
         system("title GREED: MODO GRAN MAESTRO!");
         int dado_extra;
         system("cls");
-        cout<< endl;
-
+        rlutil::locate(25,10);
         texto_letras("UN MOMENTO!!.....SILENCIO TODOS!!", 50000);
-
-        cout<< endl<<endl;
-
+        rlutil::locate(25,12);
         texto_letras("OHH estamos en presencia del GRAN MAESTRO,", 50000);
-
-        cout<< endl<<endl;
-        cout<<"\t \t  .....(hace un reverencia)"<< endl << endl;
-
+        rlutil::locate(33,13);
+        cout<<".....(hace un reverencia)"<< endl << endl;
+        rlutil::locate(25,15);
         texto_letras("Permitame ofrecerle un trato especial", 50000);
-
-        cout<< endl<<endl;
-
-        texto_letras("si promete ante el universo que dara por aprobado este trabajo practico le dare Un dado extra! :o", 50000);
-
-        cout<< endl<<endl;
-
+        rlutil::locate(25,17);
+        texto_letras("si promete que dara por aprobado este trabajo practico le dare UN dado extra! :o", 50000);
+        rlutil::locate(25,19);
         texto_letras("pero si solo tendra nueve o diez en su teclado a la hora de calificar, le dare DOS dados extras!!  XD", 50000);
-
-        cout<< endl<<endl;
-
+        rlutil::locate(25,21);
         texto_letras(".....sin presiones, usted decide...", 50000);
         puntos_suspensivos(".", 2, 1);
-
-        cout<< endl<<endl<<endl;
-        cout<<"\t \t Entonces.....cual es tu decision GRAN MAESTRO?"<< endl << endl;
-        cout<<"\t 0- jugar como el resto de los mortales, 1- un dado extra, 2- dos dados extras ;)"<< endl;
+        rlutil::locate(33,24);
+        cout<<"Entonces.....cual es tu decision GRAN MAESTRO?"<< endl << endl;
+        rlutil::locate(25,26);
+        cout<<"0- jugar como el resto de los mortales, 1- un dado extra, 2- dos dados extras ;)"<< endl;
+        rlutil::locate(33,27);
         cin>>dado_extra;
         switch(dado_extra)
         {
@@ -398,9 +389,10 @@ void maestro( int &dados_restantes, string nombre)
             break;
         }
         cout<<endl;
-        cout<<"\t \t Sabia eleccion, no por nada usted es el gran maestro!";
+        rlutil::locate(25,29);
+        cout<<"Sabia eleccion, no por nada usted es el gran maestro!";
         puntos_suspensivos(".", 2, 1);
-        cout<< endl<<endl;
+        rlutil::locate(25,30);
         cout<<"tus dados para la partida son: "<<dados_restantes<<endl;
     }
     rlutil::setColor(rlutil::BLACK);

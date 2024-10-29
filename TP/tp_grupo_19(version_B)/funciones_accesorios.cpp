@@ -243,50 +243,6 @@ rlutil::locate((xinicial+ancho), (yinicial+largo));
 rlutil::setColor(rlutil::BLACK);
 }
 
-////-------------------------------------------- PLANTILLA-------------------------------------------------
-void plantilla (int ronda_numero, string nombre, int tirada_numero){
-
-armar_cuadro(3, 2, 30, 6, "BLACK", "GREY");
-armar_cuadro_doble(35, 2, 70, 2, "BLACK", "GREY");
-armar_cuadro_doble(35, 6, 70, 2, "BLACK", "GREY");
-
-rlutil::locate(15, 4);
-cout<<"jUGADOR ";
-rlutil::locate(11, 6);
-cout<<nombre;
-rlutil::locate(64, 3);
-cout<<"RONDA NUMERO "<<ronda_numero;
-rlutil::locate(64, 7);
-cout<<"TIRADA NUMERO "<<tirada_numero;
-
-//cuadro dados ataque
-armar_cuadro_doble_rojo(3, 9, 30, 10, "BLACK", "GREY");
-rlutil::locate(9, 11);
-cout<<" DADOS DE ATAQUE ";
-
-//cuadro dados DE defensa
-armar_cuadro_doble_azul(3, 20, 30, 10, "BLACK", "GREY");
-rlutil::locate(9, 23);
-cout<<" DADOS DEFENSORES ";
-
-//cuadro dados DE RESULTADOS
-armar_cuadro_doble_gris(3, 31, 30, 6, "BLACK", "GREY");
-rlutil::locate(12,34);
-cout<<"RESULTADOS ";
-
-//cuadro de estado
-armar_cuadro_doble_gris(107, 2, 30, 6, "BLACK", "GREY");
-
-
-//cuadro de mensaje del sistema
-armar_cuadro_doble_gris(107, 9, 30, 28, "BLACK", "GREY");
-rlutil::locate(112,10);
-rlutil::setColor(rlutil::GREY);
-cout<<"MENSAJES DEL SISTEMA";
-rlutil::setColor(rlutil::BLACK);
-
-}
-
 //-------------------------------------BORRAR MENSAJES DEL MENU DEL SISTEMA--------------------------------------
 void borrar_mensajes_sistemas(){
 
@@ -372,7 +328,6 @@ rlutil::setBackgroundColor(rlutil::LIGHTRED);
 //------------------------------------------------ESCUDO --------------------------------------------------------
 void escudo (int x, int y){
 
-
 rlutil::setColor(rlutil::CYAN);
 rlutil::setBackgroundColor(rlutil::GREY);
 rlutil::locate(x+1,y);
@@ -405,4 +360,185 @@ rlutil::locate(x+3,y+1);
 cout<< (char)219;
 rlutil::setColor(rlutil::BLACK);
 rlutil::setBackgroundColor(rlutil::LIGHTRED);
+}
+
+//---------------------------------------------- CORAZON ----------------------------------------------------
+void corazon (int x, int y){
+    rlutil::setColor(rlutil::RED);
+    rlutil::setBackgroundColor(rlutil::LIGHTRED);
+    rlutil::locate(x+1,y);
+    cout<< (char)220;
+    rlutil::locate(x+3,y);
+    cout<< (char)220;
+    rlutil::locate(x,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+2,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+3,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+4,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+1,y+2);
+    cout<< (char)223;
+    rlutil::locate(x+2,y+2);
+    cout<< (char)219;
+    rlutil::locate(x+3,y+2);
+    cout<< (char)223;
+    rlutil::setColor(rlutil::WHITE);
+    rlutil::setBackgroundColor(rlutil::RED);
+    rlutil::locate(x+1,y+1);
+    cout<< (char)42;
+    rlutil::setColor(rlutil::BLACK);
+    rlutil::setBackgroundColor(rlutil::LIGHTRED);
+
+}
+
+//---------------------------------------------- CORAZON AZUL----------------------------------------------------
+void corazon_azul (int x, int y){
+    rlutil::setColor(rlutil::BLUE);
+    rlutil::setBackgroundColor(rlutil::LIGHTRED);
+    rlutil::locate(x+1,y);
+    cout<< (char)220;
+    rlutil::locate(x+3,y);
+    cout<< (char)220;
+    rlutil::locate(x,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+2,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+3,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+4,y+1);
+    cout<< (char)219;
+    rlutil::locate(x+1,y+2);
+    cout<< (char)223;
+    rlutil::locate(x+2,y+2);
+    cout<< (char)219;
+    rlutil::locate(x+3,y+2);
+    cout<< (char)223;
+    rlutil::setColor(rlutil::WHITE);
+    rlutil::setBackgroundColor(rlutil::BLUE);
+    rlutil::locate(x+1,y+1);
+    cout<< (char)42;
+    rlutil::setColor(rlutil::BLACK);
+    rlutil::setBackgroundColor(rlutil::LIGHTRED);
+}
+
+//--------------------------------------------------VIDAS-------------------------------------------------------
+void vidas (int cantidad, int posx, int posy){
+    switch(cantidad){
+        case 7:
+            corazon(posx, posy);
+            corazon(posx+6, posy);
+            corazon(posx+12, posy);
+            corazon(posx+18, posy);
+            corazon(posx+3, posy+3);
+            corazon_azul(posx+9, posy+3);
+            corazon_azul(posx+15, posy+3);
+            break;
+        case 6:
+            corazon(posx, posy);
+            corazon(posx+6, posy);
+            corazon(posx+12, posy);
+            corazon(posx+18, posy);
+            corazon(posx+3, posy+3);
+            corazon_azul(posx+9, posy+3);
+            break;
+        case 5:
+            corazon(posx, posy);
+            corazon(posx+6, posy);
+            corazon(posx+12, posy);
+            corazon(posx+18, posy);
+            corazon(posx+3, posy+3);
+            break;
+        case 4:
+            corazon(posx, posy);
+            corazon(posx+6, posy);
+            corazon(posx+12, posy);
+            corazon(posx+18, posy);
+            break;
+        case 3:
+            corazon(posx, posy);
+            corazon(posx+6, posy);
+            corazon(posx+12, posy);
+            break;
+        case 2:
+            corazon(posx, posy);
+            corazon(posx+6, posy);
+            break;
+        case 1:
+            corazon(posx, posy);
+            break;
+        default:
+            break;
+    }
+}
+
+//--------------------------------ESCUDOS RESTANTES---------------------------------
+void escudos_restantes_inanimados(int x, int y, int cantidad_dados){
+
+    switch(cantidad_dados){
+        case 3:
+            escudo (x+20, y);
+            escudo (x+10, y);
+            escudo (x, y);
+            break;
+        case 2:
+            escudo (x+10, y);
+            escudo (x, y);
+            break;
+        case 1:
+            escudo (x, y);
+            break;
+         default:
+            break;
+    }
+}
+
+////-------------------------------------------- PLANTILLA-------------------------------------------------
+void plantilla (int ronda_numero, string nombre, int tirada_numero, int dados_restantes, int dados_defensores){
+
+armar_cuadro(3, 2, 30, 6, "BLACK", "GREY");
+armar_cuadro_doble(35, 2, 70, 2, "BLACK", "GREY");
+armar_cuadro_doble(35, 6, 70, 2, "BLACK", "GREY");
+
+rlutil::locate(15, 4);
+cout<<"jUGADOR ";
+rlutil::locate(11, 6);
+cout<<nombre;
+rlutil::locate(64, 3);
+cout<<"RONDA NUMERO "<<ronda_numero;
+rlutil::locate(64, 7);
+cout<<"TIRADA NUMERO "<<tirada_numero;
+
+//cuadro dados ataque
+armar_cuadro_doble_rojo(3, 9, 30, 10, "BLACK", "GREY");
+rlutil::locate(9, 11);
+cout<<" DADOS DE ATAQUE ";
+vidas (dados_restantes, 5, 12);
+
+//cuadro dados DE defensa
+armar_cuadro_doble_azul(3, 20, 30, 10, "BLACK", "GREY");
+rlutil::locate(9, 22);
+cout<<" DADOS DEFENSORES ";
+escudos_restantes_inanimados(6, 24, dados_defensores);
+
+//cuadro dados DE RESULTADOS
+armar_cuadro_doble_gris(3, 31, 30, 6, "BLACK", "GREY");
+rlutil::locate(12,34);
+cout<<"RESULTADOS ";
+
+//cuadro de estado
+armar_cuadro_doble_gris(107, 2, 30, 6, "BLACK", "GREY");
+
+
+//cuadro de mensaje del sistema
+armar_cuadro_doble_gris(107, 9, 30, 28, "BLACK", "GREY");
+rlutil::locate(112,10);
+rlutil::setColor(rlutil::GREY);
+cout<<"MENSAJES DEL SISTEMA";
+rlutil::setColor(rlutil::BLACK);
+
+
+
+
 }
