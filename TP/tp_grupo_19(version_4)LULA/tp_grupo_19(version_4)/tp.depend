@@ -1,0 +1,351 @@
+# depslib dependency file v1.0
+1728953490 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1728947182 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\funciones.h
+
+1728946800 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\funciones.cpp
+	"funciones.h"
+	<iostream>
+
+1728951005 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\menu.h
+
+1729040169 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\un_jugador.h
+
+1729026052 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<iostream>
+
+1728951842 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	<iostream>
+
+1728989190 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\dados.cpp
+	"dados.h"
+	<iostream>
+
+1728989190 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\mi_tp\dados.h
+
+1728989190 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19\dados.cpp
+	"dados.h"
+	<iostream>
+
+1728989190 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19\dados.h
+
+1728953490 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1728951005 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19\menu.h
+
+1729081086 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19\un_jugador.h
+
+1728951842 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	<iostream>
+
+1728989190 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.2)\dados.cpp
+	"dados.h"
+	<iostream>
+
+1728989190 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.2)\dados.h
+
+1728953490 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.2)\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1728951005 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.2)\menu.h
+
+1729081086 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.2)\un_jugador.h
+
+1728951842 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.2)\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	<iostream>
+
+1729209365 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\dados.cpp
+	"dados.h"
+	<iostream>
+
+1728989190 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\dados.h
+
+1729209365 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1728951005 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\menu.h
+
+1729081086 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\un_jugador.h
+
+1729212713 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	"dos_jugadores.h"
+	<iostream>
+
+1729213063 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<iostream>
+
+1729219176 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\dos_jugadores.cpp
+	"un_jugador.h"
+	"dos_jugadores.h"
+	"dados.h"
+	<iostream>
+
+1729217510 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)\dos_jugadores.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\dados.cpp
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\dados.h
+
+1729296317 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\dos_jugadores.cpp
+	"un_jugador.h"
+	"dos_jugadores.h"
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\un_jugador.h
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\dos_jugadores.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\menu.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	"dos_jugadores.h"
+	<iostream>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version.3)-nbhp5cg8062xqz\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<iostream>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\dados.cpp
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\dados.h
+
+1729298731 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\dos_jugadores.cpp
+	"un_jugador.h"
+	"dos_jugadores.h"
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\un_jugador.h
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\dos_jugadores.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\menu.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	"dos_jugadores.h"
+	<iostream>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_2.1)\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<iostream>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\dados.cpp
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\dados.h
+
+1729298731 source:c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\dos_jugadores.cpp
+	"un_jugador.h"
+	"dos_jugadores.h"
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\un_jugador.h
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\dos_jugadores.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\menu.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	"dos_jugadores.h"
+	<iostream>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\tp_grupo_19(version_4)\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<iostream>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\dados.cpp
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\dados.h
+
+1729358950 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\dos_jugadores.cpp
+	"un_jugador.h"
+	"dos_jugadores.h"
+	"dados.h"
+	"conio.h"
+	<iostream>
+
+1729362346 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\un_jugador.h
+	<string>
+
+1729356711 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\dos_jugadores.h
+	<string>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\menu.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	"dos_jugadores.h"
+	<iostream>
+
+1729363963 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4)\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<conio.h>
+	<iostream>
+	<string.h>
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\dados.cpp
+	"dados.h"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\dados.h
+
+1729302952 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\dos_jugadores.cpp
+	"un_jugador.h"
+	"dos_jugadores.h"
+	"dados.h"
+	"conio.h"
+	<iostream>
+
+1729307989 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\un_jugador.h
+	<string>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\dos_jugadores.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+
+1729303260 c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\menu.h
+
+1729303260 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	"dos_jugadores.h"
+	<iostream>
+
+1729308913 source:c:\users\lcarabajal\onedrive - edenor\escritorio\doc utn\1-programacion i\ejercicios\tp\tp_grupo_19(version_4) - copia para mezclar\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<iostream>
+
+1729550315 source:c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\dados.cpp
+	"dados.h"
+	<iostream>
+
+1729550287 c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\dados.h
+
+1729550279 source:c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\main.cpp
+	"menu.h"
+	"un_jugador.h"
+	"ctime"
+	<iostream>
+	"rlutil.h"
+
+1730074079 c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\menu.h
+
+1729550299 c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\un_jugador.h
+	<string>
+
+1730064469 source:c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\menu.cpp
+	"menu.h"
+	"un_jugador.h"
+	"dos_jugadores.h"
+	<iostream>
+	"rlutil.h"
+	<cstdlib>
+
+1729550305 c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\dos_jugadores.h
+	<string>
+
+1729977890 source:c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\un_jugador.cpp
+	"un_jugador.h"
+	"dados.h"
+	<conio.h>
+	<iostream>
+	<string.h>
+	"rlutil.h"
+
+1729823452 source:c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\dos_jugadores.cpp
+	"un_jugador.h"
+	"dos_jugadores.h"
+	"dados.h"
+	"conio.h"
+	<iostream>
+	"rlutil.h"
+
+1729549683 c:\users\dell\downloads\tp_grupo_19(version_4)\tp_grupo_19(version_4)\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
